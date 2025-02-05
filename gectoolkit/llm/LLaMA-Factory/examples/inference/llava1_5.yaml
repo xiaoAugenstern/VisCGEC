@@ -1,0 +1,2 @@
+model_name_or_path: /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/saves/llava-1.5-7b-hf2-Visual_OCR_Image/lora/sft
+template: llava

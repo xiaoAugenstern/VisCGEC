@@ -1,0 +1,7 @@
+#model_name_or_path:
+#  Qwen/Qwen2-VL-7B-Instruct
+#  /home/LLMs/Qwen/Qwen2-7B-Instruct
+# /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/models/qwen2-7b-visual-text
+#template: qwen2_vl
+model_name_or_path: /home/LLMs/Qwen/Qwen2-7B-Instruct
+template: qwen

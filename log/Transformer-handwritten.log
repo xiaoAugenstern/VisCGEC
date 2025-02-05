@@ -1,0 +1,563 @@
+Thu 05 Sep 2024 04:32:48 INFO random_seed=2023
+use_gpu=True
+learning_rate=6e-05
+train_batch_size=32
+test_batch_size=1
+epoch_nums=50
+test_step=5
+display_train_step=1
+gpu_id=6
+training_resume=False
+load_best_config=False
+supervising_mode=fully_supervised
+validset_divide=True
+test_only=False
+shuffle=True
+model_config_file=gectoolkit/properties/model/Transformer.json
+best_config_file=gectoolkit/properties/best_config/Transformer_handwritten.json
+dataset_config_file=gectoolkit/properties/dataset/handwritten.json
+dataset_dir=dataset/handwritten
+checkpoint_file=checkpoint/Transformer-handwritten.pth
+log_file=log/Transformer-handwritten.log
+output_dir=result/Transformer-handwritten
+checkpoint_dir=checkpoint/Transformer-handwritten
+min_word_keep=5
+min_generate_keep=5
+language=zh
+pretrained_model_path=./gectoolkit/properties/model/Transformer
+approx=none
+backend=nccl
+loss_type=FC_FT_CRF
+dropout=0.2
+embed_dim=512
+hidden_dim=128
+ff_embed_dim=2048
+max_output_len=100
+max_input_len=100
+layers=6
+gamma=2
+num_heads=8
+device=cuda
+model=Transformer
+dataset=handwritten
+augment=none
+map_location=cuda
+gpu_nums=8
+
+
+Thu 05 Sep 2024 04:32:50 INFO Transformer(
+  (in_tok_embed): Embedding(21135, 512, padding_idx=0)
+  (positional_embed): LearnedPositionalEmbedding(
+    (weights): Embedding(1024, 512)
+  )
+  (self_attention_mask): SelfAttentionMask()
+  (encoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+    )
+  )
+  (decoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+      (external_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (external_layer_norm): LayerNorm()
+    )
+  )
+  (out_tok_embed): Linear(in_features=512, out_features=21135, bias=True)
+)
+Thu 05 Sep 2024 04:32:50 INFO start training...
+Thu 05 Sep 2024 04:33:00 INFO epoch [  1] train time 0h 0m 10s |  loss |[8.594]
+Thu 05 Sep 2024 04:36:12 INFO ---------- valid total [123] | valid precision [0.016] | valid recall [0.016] | valid f0.5 [0.016] | valid time 0h 3m 11s
+Thu 05 Sep 2024 04:39:14 INFO ---------- test total [123] | test precision [0.008] | test recall [0.000] | test f0.5 [0.000] | test time 0h 3m 2s
+Thu 05 Sep 2024 04:39:19 INFO epoch [  2] train time 0h 0m 3s |  loss |[7.039]
+Thu 05 Sep 2024 04:39:23 INFO epoch [  3] train time 0h 0m 3s |  loss |[5.855]
+Thu 05 Sep 2024 04:39:27 INFO epoch [  4] train time 0h 0m 3s |  loss |[5.084]
+Thu 05 Sep 2024 04:39:31 INFO epoch [  5] train time 0h 0m 3s |  loss |[4.590]
+Thu 05 Sep 2024 04:39:34 INFO epoch [  6] train time 0h 0m 3s |  loss |[4.222]
+Thu 05 Sep 2024 04:42:33 INFO ---------- valid total [123] | valid precision [0.012] | valid recall [0.011] | valid f0.5 [0.012] | valid time 0h 2m 58s
+Thu 05 Sep 2024 04:45:31 INFO ---------- test total [123] | test precision [0.007] | test recall [0.007] | test f0.5 [0.007] | test time 0h 2m 57s
+Thu 05 Sep 2024 04:45:35 INFO epoch [  7] train time 0h 0m 3s |  loss |[3.898]
+Thu 05 Sep 2024 04:45:39 INFO epoch [  8] train time 0h 0m 3s |  loss |[3.595]
+Thu 05 Sep 2024 04:45:43 INFO epoch [  9] train time 0h 0m 3s |  loss |[3.333]
+Thu 05 Sep 2024 04:45:46 INFO epoch [ 10] train time 0h 0m 3s |  loss |[3.066]
+Thu 05 Sep 2024 04:45:50 INFO epoch [ 11] train time 0h 0m 3s |  loss |[2.814]
+Thu 05 Sep 2024 04:48:50 INFO ---------- valid total [123] | valid precision [0.026] | valid recall [0.037] | valid f0.5 [0.027] | valid time 0h 2m 59s
+Thu 05 Sep 2024 04:51:50 INFO ---------- test total [123] | test precision [0.029] | test recall [0.039] | test f0.5 [0.022] | test time 0h 2m 59s
+Thu 05 Sep 2024 04:51:56 INFO epoch [ 12] train time 0h 0m 3s |  loss |[2.580]
+Thu 05 Sep 2024 04:52:00 INFO epoch [ 13] train time 0h 0m 3s |  loss |[2.371]
+Thu 05 Sep 2024 04:52:03 INFO epoch [ 14] train time 0h 0m 3s |  loss |[2.185]
+Thu 05 Sep 2024 04:52:07 INFO epoch [ 15] train time 0h 0m 3s |  loss |[2.014]
+Thu 05 Sep 2024 04:52:11 INFO epoch [ 16] train time 0h 0m 3s |  loss |[1.852]
+Thu 05 Sep 2024 04:55:12 INFO ---------- valid total [123] | valid precision [0.055] | valid recall [0.021] | valid f0.5 [0.015] | valid time 0h 3m 0s
+Thu 05 Sep 2024 04:58:14 INFO ---------- test total [123] | test precision [0.042] | test recall [0.027] | test f0.5 [0.018] | test time 0h 3m 1s
+Thu 05 Sep 2024 04:58:18 INFO epoch [ 17] train time 0h 0m 3s |  loss |[1.698]
+Thu 05 Sep 2024 04:58:21 INFO epoch [ 18] train time 0h 0m 3s |  loss |[1.561]
+Thu 05 Sep 2024 04:58:25 INFO epoch [ 19] train time 0h 0m 3s |  loss |[1.433]
+Thu 05 Sep 2024 04:58:29 INFO epoch [ 20] train time 0h 0m 3s |  loss |[1.325]
+Thu 05 Sep 2024 04:58:33 INFO epoch [ 21] train time 0h 0m 3s |  loss |[1.221]
+Thu 05 Sep 2024 05:01:33 INFO ---------- valid total [123] | valid precision [0.063] | valid recall [0.035] | valid f0.5 [0.024] | valid time 0h 3m 0s
+Thu 05 Sep 2024 05:04:32 INFO ---------- test total [123] | test precision [0.072] | test recall [0.016] | test f0.5 [0.015] | test time 0h 2m 58s
+Thu 05 Sep 2024 05:04:36 INFO epoch [ 22] train time 0h 0m 3s |  loss |[1.129]
+Thu 05 Sep 2024 05:04:39 INFO epoch [ 23] train time 0h 0m 3s |  loss |[1.039]
+Thu 05 Sep 2024 05:04:43 INFO epoch [ 24] train time 0h 0m 3s |  loss |[0.954]
+Thu 05 Sep 2024 05:04:47 INFO epoch [ 25] train time 0h 0m 3s |  loss |[0.878]
+Thu 05 Sep 2024 05:04:51 INFO epoch [ 26] train time 0h 0m 3s |  loss |[0.812]
+Thu 05 Sep 2024 05:07:50 INFO ---------- valid total [123] | valid precision [0.079] | valid recall [0.051] | valid f0.5 [0.032] | valid time 0h 2m 59s
+Thu 05 Sep 2024 05:10:49 INFO ---------- test total [123] | test precision [0.096] | test recall [0.028] | test f0.5 [0.022] | test time 0h 2m 59s
+Thu 05 Sep 2024 05:10:54 INFO epoch [ 27] train time 0h 0m 3s |  loss |[0.745]
+Thu 05 Sep 2024 05:10:58 INFO epoch [ 28] train time 0h 0m 3s |  loss |[0.689]
+Thu 05 Sep 2024 05:11:02 INFO epoch [ 29] train time 0h 0m 3s |  loss |[0.639]
+Thu 05 Sep 2024 05:11:06 INFO epoch [ 30] train time 0h 0m 3s |  loss |[0.584]
+Thu 05 Sep 2024 05:11:10 INFO epoch [ 31] train time 0h 0m 3s |  loss |[0.536]
+Thu 05 Sep 2024 05:14:09 INFO ---------- valid total [123] | valid precision [0.111] | valid recall [0.042] | valid f0.5 [0.023] | valid time 0h 2m 59s
+Thu 05 Sep 2024 05:17:09 INFO ---------- test total [123] | test precision [0.094] | test recall [0.031] | test f0.5 [0.014] | test time 0h 2m 59s
+Thu 05 Sep 2024 05:17:13 INFO epoch [ 32] train time 0h 0m 3s |  loss |[0.492]
+Thu 05 Sep 2024 05:17:17 INFO epoch [ 33] train time 0h 0m 3s |  loss |[0.452]
+Thu 05 Sep 2024 05:17:21 INFO epoch [ 34] train time 0h 0m 3s |  loss |[0.413]
+Thu 05 Sep 2024 05:17:24 INFO epoch [ 35] train time 0h 0m 3s |  loss |[0.377]
+Thu 05 Sep 2024 05:17:28 INFO epoch [ 36] train time 0h 0m 3s |  loss |[0.343]
+Thu 05 Sep 2024 05:20:28 INFO ---------- valid total [123] | valid precision [0.161] | valid recall [0.064] | valid f0.5 [0.048] | valid time 0h 2m 59s
+Thu 05 Sep 2024 05:23:28 INFO ---------- test total [123] | test precision [0.103] | test recall [0.023] | test f0.5 [0.015] | test time 0h 3m 0s
+Thu 05 Sep 2024 05:23:34 INFO epoch [ 37] train time 0h 0m 3s |  loss |[0.318]
+Thu 05 Sep 2024 05:23:37 INFO epoch [ 38] train time 0h 0m 3s |  loss |[0.287]
+Thu 05 Sep 2024 05:23:41 INFO epoch [ 39] train time 0h 0m 3s |  loss |[0.264]
+Thu 05 Sep 2024 05:23:45 INFO epoch [ 40] train time 0h 0m 3s |  loss |[0.239]
+Thu 05 Sep 2024 05:23:49 INFO epoch [ 41] train time 0h 0m 3s |  loss |[0.218]
+Thu 05 Sep 2024 05:26:49 INFO ---------- valid total [123] | valid precision [0.103] | valid recall [0.062] | valid f0.5 [0.040] | valid time 0h 3m 0s
+Thu 05 Sep 2024 05:29:48 INFO ---------- test total [123] | test precision [0.085] | test recall [0.024] | test f0.5 [0.013] | test time 0h 2m 58s
+Thu 05 Sep 2024 05:29:52 INFO epoch [ 42] train time 0h 0m 3s |  loss |[0.199]
+Thu 05 Sep 2024 05:29:56 INFO epoch [ 43] train time 0h 0m 3s |  loss |[0.183]
+Thu 05 Sep 2024 05:30:00 INFO epoch [ 44] train time 0h 0m 3s |  loss |[0.164]
+Thu 05 Sep 2024 05:30:04 INFO epoch [ 45] train time 0h 0m 3s |  loss |[0.154]
+Thu 05 Sep 2024 05:30:07 INFO epoch [ 46] train time 0h 0m 3s |  loss |[0.139]
+Thu 05 Sep 2024 05:33:07 INFO ---------- valid total [123] | valid precision [0.121] | valid recall [0.047] | valid f0.5 [0.032] | valid time 0h 2m 59s
+Thu 05 Sep 2024 05:36:07 INFO ---------- test total [123] | test precision [0.097] | test recall [0.039] | test f0.5 [0.017] | test time 0h 2m 59s
+Thu 05 Sep 2024 05:36:11 INFO epoch [ 47] train time 0h 0m 3s |  loss |[0.127]
+Thu 05 Sep 2024 05:39:09 INFO ---------- valid total [123] | valid precision [0.142] | valid recall [0.048] | valid f0.5 [0.037] | valid time 0h 2m 58s
+Thu 05 Sep 2024 05:42:09 INFO ---------- test total [123] | test precision [0.156] | test recall [0.030] | test f0.5 [0.023] | test time 0h 2m 59s
+Thu 05 Sep 2024 05:42:13 INFO epoch [ 48] train time 0h 0m 3s |  loss |[0.116]
+Thu 05 Sep 2024 05:45:12 INFO ---------- valid total [123] | valid precision [0.105] | valid recall [0.050] | valid f0.5 [0.033] | valid time 0h 2m 59s
+Thu 05 Sep 2024 05:48:11 INFO ---------- test total [123] | test precision [0.109] | test recall [0.035] | test f0.5 [0.021] | test time 0h 2m 58s
+Thu 05 Sep 2024 05:48:15 INFO epoch [ 49] train time 0h 0m 3s |  loss |[0.101]
+Thu 05 Sep 2024 05:51:15 INFO ---------- valid total [123] | valid precision [0.103] | valid recall [0.052] | valid f0.5 [0.038] | valid time 0h 2m 59s
+Thu 05 Sep 2024 05:54:12 INFO ---------- test total [123] | test precision [0.120] | test recall [0.028] | test f0.5 [0.016] | test time 0h 2m 57s
+Thu 05 Sep 2024 05:54:16 INFO epoch [ 50] train time 0h 0m 3s |  loss |[0.094]
+Thu 05 Sep 2024 05:57:15 INFO ---------- valid total [123] | valid precision [0.149] | valid recall [0.043] | valid f0.5 [0.028] | valid time 0h 2m 59s
+Thu 05 Sep 2024 06:00:14 INFO ---------- test total [123] | test precision [0.103] | test recall [0.020] | test f0.5 [0.013] | test time 0h 2m 58s
+Thu 05 Sep 2024 06:00:14 INFO training finished.
+                            best valid result: precision [0.161] | recall [0.064] | F0.5 [0.048]
+                            best test result : precision [0.103] | recall [0.023] | F0.5 [0.015]
+Thu 05 Sep 2024 07:09:22 INFO random_seed=2023
+use_gpu=True
+learning_rate=6e-05
+train_batch_size=32
+test_batch_size=1
+epoch_nums=100
+test_step=5
+display_train_step=1
+gpu_id=5
+training_resume=False
+load_best_config=False
+supervising_mode=fully_supervised
+validset_divide=True
+test_only=False
+shuffle=True
+model_config_file=gectoolkit/properties/model/Transformer.json
+best_config_file=gectoolkit/properties/best_config/Transformer_handwritten.json
+dataset_config_file=gectoolkit/properties/dataset/handwritten.json
+dataset_dir=dataset/handwritten
+checkpoint_file=checkpoint/Transformer-handwritten.pth
+log_file=log/Transformer-handwritten.log
+output_dir=result/Transformer-handwritten
+checkpoint_dir=checkpoint/Transformer-handwritten
+min_word_keep=5
+min_generate_keep=5
+language=zh
+pretrained_model_path=./gectoolkit/properties/model/Transformer
+approx=none
+backend=nccl
+loss_type=FC_FT_CRF
+dropout=0.2
+embed_dim=512
+hidden_dim=128
+ff_embed_dim=2048
+max_output_len=100
+max_input_len=100
+layers=6
+gamma=2
+num_heads=8
+device=cuda
+model=Transformer
+dataset=handwritten
+augment=none
+map_location=cuda
+gpu_nums=8
+
+
+Thu 05 Sep 2024 07:09:24 INFO Transformer(
+  (in_tok_embed): Embedding(21135, 512, padding_idx=0)
+  (positional_embed): LearnedPositionalEmbedding(
+    (weights): Embedding(1024, 512)
+  )
+  (self_attention_mask): SelfAttentionMask()
+  (encoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+    )
+  )
+  (decoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+      (external_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (external_layer_norm): LayerNorm()
+    )
+  )
+  (out_tok_embed): Linear(in_features=512, out_features=21135, bias=True)
+)
+Thu 05 Sep 2024 07:09:24 INFO start training...
+Thu 05 Sep 2024 07:09:34 INFO epoch [  1] train time 0h 0m 10s |  loss |[8.594]
+Thu 05 Sep 2024 07:12:39 INFO ---------- valid total [123] | valid precision [0.024] | valid recall [0.008] | valid f0.5 [0.008] | valid time 0h 3m 4s
+Thu 05 Sep 2024 07:15:09 INFO random_seed=2023
+use_gpu=True
+learning_rate=6e-05
+train_batch_size=32
+test_batch_size=1
+epoch_nums=100
+test_step=5
+display_train_step=1
+gpu_id=5
+training_resume=False
+load_best_config=False
+supervising_mode=fully_supervised
+validset_divide=True
+test_only=False
+shuffle=True
+model_config_file=gectoolkit/properties/model/Transformer.json
+best_config_file=gectoolkit/properties/best_config/Transformer_handwritten.json
+dataset_config_file=gectoolkit/properties/dataset/handwritten.json
+dataset_dir=dataset/handwritten
+checkpoint_file=checkpoint/Transformer-handwritten.pth
+log_file=log/Transformer-handwritten.log
+output_dir=result/Transformer-handwritten
+checkpoint_dir=checkpoint/Transformer-handwritten
+min_word_keep=5
+min_generate_keep=5
+language=zh
+pretrained_model_path=./gectoolkit/properties/model/Transformer
+approx=none
+backend=nccl
+loss_type=FC_FT_CRF
+dropout=0.2
+embed_dim=512
+hidden_dim=128
+ff_embed_dim=2048
+max_output_len=100
+max_input_len=100
+layers=6
+gamma=2
+num_heads=8
+device=cuda
+model=Transformer
+dataset=handwritten
+augment=none
+map_location=cuda
+gpu_nums=1
+
+
+Thu 05 Sep 2024 07:15:11 INFO Transformer(
+  (in_tok_embed): Embedding(21135, 512, padding_idx=0)
+  (positional_embed): LearnedPositionalEmbedding(
+    (weights): Embedding(1024, 512)
+  )
+  (self_attention_mask): SelfAttentionMask()
+  (encoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+    )
+  )
+  (decoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+      (external_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (external_layer_norm): LayerNorm()
+    )
+  )
+  (out_tok_embed): Linear(in_features=512, out_features=21135, bias=True)
+)
+Thu 05 Sep 2024 07:15:11 INFO start training...
+Thu 05 Sep 2024 07:15:17 INFO epoch [  1] train time 0h 0m 6s |  loss |[8.594]
+Thu 05 Sep 2024 07:16:53 INFO random_seed=2023
+use_gpu=True
+learning_rate=6e-05
+train_batch_size=32
+test_batch_size=1
+epoch_nums=100
+test_step=5
+display_train_step=1
+gpu_id=5
+training_resume=False
+load_best_config=False
+supervising_mode=fully_supervised
+validset_divide=True
+test_only=False
+shuffle=True
+model_config_file=gectoolkit/properties/model/Transformer.json
+best_config_file=gectoolkit/properties/best_config/Transformer_handwritten.json
+dataset_config_file=gectoolkit/properties/dataset/handwritten.json
+dataset_dir=dataset/handwritten
+checkpoint_file=checkpoint/Transformer-handwritten.pth
+log_file=log/Transformer-handwritten.log
+output_dir=result/Transformer-handwritten
+checkpoint_dir=checkpoint/Transformer-handwritten
+min_word_keep=5
+min_generate_keep=5
+language=zh
+pretrained_model_path=./gectoolkit/properties/model/Transformer
+approx=none
+backend=nccl
+loss_type=FC_FT_CRF
+dropout=0.2
+embed_dim=512
+hidden_dim=128
+ff_embed_dim=2048
+max_output_len=100
+max_input_len=100
+layers=6
+gamma=2
+num_heads=8
+device=cuda
+model=Transformer
+dataset=handwritten
+augment=none
+map_location=cuda
+gpu_nums=8
+
+
+Thu 05 Sep 2024 07:16:57 INFO Transformer(
+  (in_tok_embed): Embedding(21135, 512, padding_idx=0)
+  (positional_embed): LearnedPositionalEmbedding(
+    (weights): Embedding(1024, 512)
+  )
+  (self_attention_mask): SelfAttentionMask()
+  (encoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+    )
+  )
+  (decoder_stack): ModuleList(
+    (0-5): 6 x TransformerLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (fc1): Linear(in_features=512, out_features=2048, bias=True)
+      (fc2): Linear(in_features=2048, out_features=512, bias=True)
+      (attn_layer_norm): LayerNorm()
+      (ff_layer_norm): LayerNorm()
+      (external_attn): MultiheadAttention(
+        (out_proj): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (external_layer_norm): LayerNorm()
+    )
+  )
+  (out_tok_embed): Linear(in_features=512, out_features=21135, bias=True)
+)
+Thu 05 Sep 2024 07:16:57 INFO start training...
+Thu 05 Sep 2024 07:17:05 INFO epoch [  1] train time 0h 0m 8s |  loss |[8.594]
+Thu 05 Sep 2024 07:18:02 INFO ---------- valid total [123] | valid precision [0.016] | valid recall [0.008] | valid f0.5 [0.008] | valid time 0h 2m 44s
+Thu 05 Sep 2024 07:20:47 INFO ---------- test total [123] | test precision [0.024] | test recall [0.024] | test f0.5 [0.017] | test time 0h 2m 44s
+Thu 05 Sep 2024 07:20:50 INFO epoch [  2] train time 0h 0m 2s |  loss |[7.039]
+Thu 05 Sep 2024 07:20:53 INFO epoch [  3] train time 0h 0m 2s |  loss |[5.855]
+Thu 05 Sep 2024 07:20:55 INFO epoch [  4] train time 0h 0m 2s |  loss |[5.084]
+Thu 05 Sep 2024 07:20:58 INFO epoch [  5] train time 0h 0m 2s |  loss |[4.590]
+Thu 05 Sep 2024 07:21:00 INFO epoch [  6] train time 0h 0m 2s |  loss |[4.222]
+Thu 05 Sep 2024 07:23:40 INFO ---------- valid total [123] | valid precision [0.020] | valid recall [0.011] | valid f0.5 [0.012] | valid time 0h 2m 39s
+Thu 05 Sep 2024 07:26:20 INFO ---------- test total [123] | test precision [0.000] | test recall [0.000] | test f0.5 [0.000] | test time 0h 2m 39s
+Thu 05 Sep 2024 07:26:23 INFO epoch [  7] train time 0h 0m 2s |  loss |[3.898]
+Thu 05 Sep 2024 07:26:26 INFO epoch [  8] train time 0h 0m 2s |  loss |[3.595]
+Thu 05 Sep 2024 07:26:28 INFO epoch [  9] train time 0h 0m 2s |  loss |[3.333]
+Thu 05 Sep 2024 07:26:31 INFO epoch [ 10] train time 0h 0m 2s |  loss |[3.066]
+Thu 05 Sep 2024 07:26:33 INFO epoch [ 11] train time 0h 0m 2s |  loss |[2.814]
+Thu 05 Sep 2024 07:29:13 INFO ---------- valid total [123] | valid precision [0.023] | valid recall [0.019] | valid f0.5 [0.016] | valid time 0h 2m 39s
+Thu 05 Sep 2024 07:31:49 INFO ---------- test total [123] | test precision [0.019] | test recall [0.023] | test f0.5 [0.012] | test time 0h 2m 35s
+Thu 05 Sep 2024 07:31:52 INFO epoch [ 12] train time 0h 0m 2s |  loss |[2.580]
+Thu 05 Sep 2024 07:31:55 INFO epoch [ 13] train time 0h 0m 2s |  loss |[2.371]
+Thu 05 Sep 2024 07:31:57 INFO epoch [ 14] train time 0h 0m 2s |  loss |[2.185]
+Thu 05 Sep 2024 07:32:00 INFO epoch [ 15] train time 0h 0m 2s |  loss |[2.014]
+Thu 05 Sep 2024 07:32:02 INFO epoch [ 16] train time 0h 0m 2s |  loss |[1.852]
+Thu 05 Sep 2024 07:34:39 INFO ---------- valid total [123] | valid precision [0.047] | valid recall [0.037] | valid f0.5 [0.024] | valid time 0h 2m 36s
+Thu 05 Sep 2024 07:37:16 INFO ---------- test total [123] | test precision [0.056] | test recall [0.024] | test f0.5 [0.016] | test time 0h 2m 36s
+Thu 05 Sep 2024 07:37:19 INFO epoch [ 17] train time 0h 0m 2s |  loss |[1.698]
+Thu 05 Sep 2024 07:37:22 INFO epoch [ 18] train time 0h 0m 2s |  loss |[1.561]
+Thu 05 Sep 2024 07:37:24 INFO epoch [ 19] train time 0h 0m 2s |  loss |[1.433]
+Thu 05 Sep 2024 07:37:27 INFO epoch [ 20] train time 0h 0m 2s |  loss |[1.325]
+Thu 05 Sep 2024 07:37:29 INFO epoch [ 21] train time 0h 0m 2s |  loss |[1.221]
+Thu 05 Sep 2024 07:40:07 INFO ---------- valid total [123] | valid precision [0.051] | valid recall [0.037] | valid f0.5 [0.012] | valid time 0h 2m 37s
+Thu 05 Sep 2024 07:42:44 INFO ---------- test total [123] | test precision [0.076] | test recall [0.020] | test f0.5 [0.019] | test time 0h 2m 36s
+Thu 05 Sep 2024 07:42:46 INFO epoch [ 22] train time 0h 0m 2s |  loss |[1.129]
+Thu 05 Sep 2024 07:42:49 INFO epoch [ 23] train time 0h 0m 2s |  loss |[1.039]
+Thu 05 Sep 2024 07:42:51 INFO epoch [ 24] train time 0h 0m 2s |  loss |[0.954]
+Thu 05 Sep 2024 07:42:54 INFO epoch [ 25] train time 0h 0m 2s |  loss |[0.878]
+Thu 05 Sep 2024 07:42:56 INFO epoch [ 26] train time 0h 0m 2s |  loss |[0.812]
+Thu 05 Sep 2024 07:45:33 INFO ---------- valid total [123] | valid precision [0.068] | valid recall [0.031] | valid f0.5 [0.020] | valid time 0h 2m 37s
+Thu 05 Sep 2024 07:48:10 INFO ---------- test total [123] | test precision [0.081] | test recall [0.037] | test f0.5 [0.024] | test time 0h 2m 37s
+Thu 05 Sep 2024 07:48:13 INFO epoch [ 27] train time 0h 0m 2s |  loss |[0.745]
+Thu 05 Sep 2024 07:48:15 INFO epoch [ 28] train time 0h 0m 2s |  loss |[0.689]
+Thu 05 Sep 2024 07:48:18 INFO epoch [ 29] train time 0h 0m 2s |  loss |[0.639]
+Thu 05 Sep 2024 07:48:20 INFO epoch [ 30] train time 0h 0m 2s |  loss |[0.584]
+Thu 05 Sep 2024 07:48:23 INFO epoch [ 31] train time 0h 0m 2s |  loss |[0.536]
+Thu 05 Sep 2024 07:51:00 INFO ---------- valid total [123] | valid precision [0.126] | valid recall [0.062] | valid f0.5 [0.039] | valid time 0h 2m 36s
+Thu 05 Sep 2024 07:53:37 INFO ---------- test total [123] | test precision [0.098] | test recall [0.039] | test f0.5 [0.018] | test time 0h 2m 37s
+Thu 05 Sep 2024 07:53:41 INFO epoch [ 32] train time 0h 0m 2s |  loss |[0.492]
+Thu 05 Sep 2024 07:53:43 INFO epoch [ 33] train time 0h 0m 2s |  loss |[0.452]
+Thu 05 Sep 2024 07:53:46 INFO epoch [ 34] train time 0h 0m 2s |  loss |[0.413]
+Thu 05 Sep 2024 07:53:48 INFO epoch [ 35] train time 0h 0m 2s |  loss |[0.377]
+Thu 05 Sep 2024 07:53:51 INFO epoch [ 36] train time 0h 0m 2s |  loss |[0.343]
+Thu 05 Sep 2024 07:56:27 INFO ---------- valid total [123] | valid precision [0.145] | valid recall [0.055] | valid f0.5 [0.040] | valid time 0h 2m 36s
+Thu 05 Sep 2024 07:59:03 INFO ---------- test total [123] | test precision [0.107] | test recall [0.031] | test f0.5 [0.019] | test time 0h 2m 35s
+Thu 05 Sep 2024 07:59:07 INFO epoch [ 37] train time 0h 0m 2s |  loss |[0.318]
+Thu 05 Sep 2024 07:59:09 INFO epoch [ 38] train time 0h 0m 2s |  loss |[0.287]
+Thu 05 Sep 2024 07:59:12 INFO epoch [ 39] train time 0h 0m 2s |  loss |[0.264]
+Thu 05 Sep 2024 07:59:14 INFO epoch [ 40] train time 0h 0m 2s |  loss |[0.239]
+Thu 05 Sep 2024 07:59:17 INFO epoch [ 41] train time 0h 0m 2s |  loss |[0.218]
+Thu 05 Sep 2024 08:01:53 INFO ---------- valid total [123] | valid precision [0.104] | valid recall [0.038] | valid f0.5 [0.024] | valid time 0h 2m 36s
+Thu 05 Sep 2024 08:04:30 INFO ---------- test total [123] | test precision [0.099] | test recall [0.028] | test f0.5 [0.018] | test time 0h 2m 36s
+Thu 05 Sep 2024 08:04:32 INFO epoch [ 42] train time 0h 0m 2s |  loss |[0.199]
+Thu 05 Sep 2024 08:04:35 INFO epoch [ 43] train time 0h 0m 2s |  loss |[0.183]
+Thu 05 Sep 2024 08:04:37 INFO epoch [ 44] train time 0h 0m 2s |  loss |[0.164]
+Thu 05 Sep 2024 08:04:40 INFO epoch [ 45] train time 0h 0m 2s |  loss |[0.154]
+Thu 05 Sep 2024 08:04:42 INFO epoch [ 46] train time 0h 0m 2s |  loss |[0.139]
+Thu 05 Sep 2024 08:07:18 INFO ---------- valid total [123] | valid precision [0.120] | valid recall [0.039] | valid f0.5 [0.031] | valid time 0h 2m 36s
+Thu 05 Sep 2024 08:09:54 INFO ---------- test total [123] | test precision [0.095] | test recall [0.035] | test f0.5 [0.016] | test time 0h 2m 36s
+Thu 05 Sep 2024 08:09:57 INFO epoch [ 47] train time 0h 0m 2s |  loss |[0.127]
+Thu 05 Sep 2024 08:09:59 INFO epoch [ 48] train time 0h 0m 2s |  loss |[0.116]
+Thu 05 Sep 2024 08:10:02 INFO epoch [ 49] train time 0h 0m 2s |  loss |[0.101]
+Thu 05 Sep 2024 08:10:04 INFO epoch [ 50] train time 0h 0m 2s |  loss |[0.094]
+Thu 05 Sep 2024 08:10:07 INFO epoch [ 51] train time 0h 0m 2s |  loss |[0.089]
+Thu 05 Sep 2024 08:12:43 INFO ---------- valid total [123] | valid precision [0.113] | valid recall [0.048] | valid f0.5 [0.032] | valid time 0h 2m 36s
+Thu 05 Sep 2024 08:15:19 INFO ---------- test total [123] | test precision [0.108] | test recall [0.043] | test f0.5 [0.021] | test time 0h 2m 36s
+Thu 05 Sep 2024 08:15:22 INFO epoch [ 52] train time 0h 0m 2s |  loss |[0.081]
+Thu 05 Sep 2024 08:15:24 INFO epoch [ 53] train time 0h 0m 2s |  loss |[0.072]
+Thu 05 Sep 2024 08:15:27 INFO epoch [ 54] train time 0h 0m 2s |  loss |[0.065]
+Thu 05 Sep 2024 08:15:29 INFO epoch [ 55] train time 0h 0m 2s |  loss |[0.060]
+Thu 05 Sep 2024 08:15:32 INFO epoch [ 56] train time 0h 0m 2s |  loss |[0.056]
+Thu 05 Sep 2024 08:18:08 INFO ---------- valid total [123] | valid precision [0.136] | valid recall [0.044] | valid f0.5 [0.031] | valid time 0h 2m 36s
+Thu 05 Sep 2024 08:20:43 INFO ---------- test total [123] | test precision [0.125] | test recall [0.024] | test f0.5 [0.018] | test time 0h 2m 35s
+Thu 05 Sep 2024 08:20:46 INFO epoch [ 57] train time 0h 0m 2s |  loss |[0.051]
+Thu 05 Sep 2024 08:20:48 INFO epoch [ 58] train time 0h 0m 2s |  loss |[0.049]
+Thu 05 Sep 2024 08:20:51 INFO epoch [ 59] train time 0h 0m 2s |  loss |[0.045]
+Thu 05 Sep 2024 08:20:53 INFO epoch [ 60] train time 0h 0m 2s |  loss |[0.040]
+Thu 05 Sep 2024 08:20:56 INFO epoch [ 61] train time 0h 0m 2s |  loss |[0.036]
+Thu 05 Sep 2024 08:23:30 INFO ---------- valid total [123] | valid precision [0.132] | valid recall [0.061] | valid f0.5 [0.044] | valid time 0h 2m 34s
+Thu 05 Sep 2024 08:26:05 INFO ---------- test total [123] | test precision [0.095] | test recall [0.035] | test f0.5 [0.016] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:26:09 INFO epoch [ 62] train time 0h 0m 2s |  loss |[0.034]
+Thu 05 Sep 2024 08:26:12 INFO epoch [ 63] train time 0h 0m 2s |  loss |[0.034]
+Thu 05 Sep 2024 08:26:14 INFO epoch [ 64] train time 0h 0m 2s |  loss |[0.029]
+Thu 05 Sep 2024 08:26:16 INFO epoch [ 65] train time 0h 0m 2s |  loss |[0.027]
+Thu 05 Sep 2024 08:26:19 INFO epoch [ 66] train time 0h 0m 2s |  loss |[0.024]
+Thu 05 Sep 2024 08:28:54 INFO ---------- valid total [123] | valid precision [0.135] | valid recall [0.063] | valid f0.5 [0.046] | valid time 0h 2m 35s
+Thu 05 Sep 2024 08:31:29 INFO ---------- test total [123] | test precision [0.112] | test recall [0.037] | test f0.5 [0.017] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:31:33 INFO epoch [ 67] train time 0h 0m 2s |  loss |[0.025]
+Thu 05 Sep 2024 08:31:35 INFO epoch [ 68] train time 0h 0m 2s |  loss |[0.022]
+Thu 05 Sep 2024 08:31:38 INFO epoch [ 69] train time 0h 0m 2s |  loss |[0.021]
+Thu 05 Sep 2024 08:31:40 INFO epoch [ 70] train time 0h 0m 2s |  loss |[0.024]
+Thu 05 Sep 2024 08:31:43 INFO epoch [ 71] train time 0h 0m 2s |  loss |[0.019]
+Thu 05 Sep 2024 08:34:17 INFO ---------- valid total [123] | valid precision [0.095] | valid recall [0.046] | valid f0.5 [0.032] | valid time 0h 2m 34s
+Thu 05 Sep 2024 08:36:52 INFO ---------- test total [123] | test precision [0.105] | test recall [0.041] | test f0.5 [0.017] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:36:54 INFO epoch [ 72] train time 0h 0m 2s |  loss |[0.019]
+Thu 05 Sep 2024 08:36:57 INFO epoch [ 73] train time 0h 0m 2s |  loss |[0.017]
+Thu 05 Sep 2024 08:36:59 INFO epoch [ 74] train time 0h 0m 2s |  loss |[0.017]
+Thu 05 Sep 2024 08:37:01 INFO epoch [ 75] train time 0h 0m 2s |  loss |[0.015]
+Thu 05 Sep 2024 08:37:04 INFO epoch [ 76] train time 0h 0m 2s |  loss |[0.015]
+Thu 05 Sep 2024 08:39:39 INFO ---------- valid total [123] | valid precision [0.112] | valid recall [0.061] | valid f0.5 [0.032] | valid time 0h 2m 35s
+Thu 05 Sep 2024 08:42:14 INFO ---------- test total [123] | test precision [0.106] | test recall [0.041] | test f0.5 [0.019] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:42:16 INFO epoch [ 77] train time 0h 0m 2s |  loss |[0.015]
+Thu 05 Sep 2024 08:42:19 INFO epoch [ 78] train time 0h 0m 2s |  loss |[0.016]
+Thu 05 Sep 2024 08:42:21 INFO epoch [ 79] train time 0h 0m 2s |  loss |[0.013]
+Thu 05 Sep 2024 08:42:24 INFO epoch [ 80] train time 0h 0m 2s |  loss |[0.013]
+Thu 05 Sep 2024 08:42:26 INFO epoch [ 81] train time 0h 0m 2s |  loss |[0.012]
+Thu 05 Sep 2024 08:45:01 INFO ---------- valid total [123] | valid precision [0.122] | valid recall [0.062] | valid f0.5 [0.042] | valid time 0h 2m 35s
+Thu 05 Sep 2024 08:47:36 INFO ---------- test total [123] | test precision [0.111] | test recall [0.049] | test f0.5 [0.031] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:47:39 INFO epoch [ 82] train time 0h 0m 2s |  loss |[0.011]
+Thu 05 Sep 2024 08:47:41 INFO epoch [ 83] train time 0h 0m 2s |  loss |[0.010]
+Thu 05 Sep 2024 08:47:44 INFO epoch [ 84] train time 0h 0m 2s |  loss |[0.012]
+Thu 05 Sep 2024 08:47:46 INFO epoch [ 85] train time 0h 0m 2s |  loss |[0.012]
+Thu 05 Sep 2024 08:47:49 INFO epoch [ 86] train time 0h 0m 2s |  loss |[0.011]
+Thu 05 Sep 2024 08:50:24 INFO ---------- valid total [123] | valid precision [0.097] | valid recall [0.055] | valid f0.5 [0.041] | valid time 0h 2m 35s
+Thu 05 Sep 2024 08:52:59 INFO ---------- test total [123] | test precision [0.122] | test recall [0.033] | test f0.5 [0.018] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:53:01 INFO epoch [ 87] train time 0h 0m 2s |  loss |[0.010]
+Thu 05 Sep 2024 08:53:04 INFO epoch [ 88] train time 0h 0m 2s |  loss |[0.011]
+Thu 05 Sep 2024 08:53:06 INFO epoch [ 89] train time 0h 0m 2s |  loss |[0.010]
+Thu 05 Sep 2024 08:53:09 INFO epoch [ 90] train time 0h 0m 2s |  loss |[0.011]
+Thu 05 Sep 2024 08:53:11 INFO epoch [ 91] train time 0h 0m 2s |  loss |[0.010]
+Thu 05 Sep 2024 08:55:46 INFO ---------- valid total [123] | valid precision [0.142] | valid recall [0.052] | valid f0.5 [0.037] | valid time 0h 2m 34s
+Thu 05 Sep 2024 08:58:20 INFO ---------- test total [123] | test precision [0.142] | test recall [0.035] | test f0.5 [0.021] | test time 0h 2m 34s
+Thu 05 Sep 2024 08:58:22 INFO epoch [ 92] train time 0h 0m 2s |  loss |[0.012]
+Thu 05 Sep 2024 08:58:25 INFO epoch [ 93] train time 0h 0m 2s |  loss |[0.011]
+Thu 05 Sep 2024 08:58:27 INFO epoch [ 94] train time 0h 0m 2s |  loss |[0.010]
+Thu 05 Sep 2024 08:58:30 INFO epoch [ 95] train time 0h 0m 2s |  loss |[0.008]
+Thu 05 Sep 2024 08:58:32 INFO epoch [ 96] train time 0h 0m 2s |  loss |[0.009]
+Thu 05 Sep 2024 09:01:07 INFO ---------- valid total [123] | valid precision [0.131] | valid recall [0.063] | valid f0.5 [0.042] | valid time 0h 2m 34s
+Thu 05 Sep 2024 09:03:42 INFO ---------- test total [123] | test precision [0.128] | test recall [0.034] | test f0.5 [0.015] | test time 0h 2m 34s
+Thu 05 Sep 2024 09:03:44 INFO epoch [ 97] train time 0h 0m 2s |  loss |[0.009]
+Thu 05 Sep 2024 09:06:19 INFO ---------- valid total [123] | valid precision [0.141] | valid recall [0.052] | valid f0.5 [0.036] | valid time 0h 2m 34s
+Thu 05 Sep 2024 09:08:54 INFO ---------- test total [123] | test precision [0.110] | test recall [0.036] | test f0.5 [0.014] | test time 0h 2m 34s
+Thu 05 Sep 2024 09:08:56 INFO epoch [ 98] train time 0h 0m 2s |  loss |[0.010]
+Thu 05 Sep 2024 09:11:31 INFO ---------- valid total [123] | valid precision [0.152] | valid recall [0.051] | valid f0.5 [0.039] | valid time 0h 2m 34s
+Thu 05 Sep 2024 09:14:05 INFO ---------- test total [123] | test precision [0.134] | test recall [0.028] | test f0.5 [0.014] | test time 0h 2m 34s
+Thu 05 Sep 2024 09:14:07 INFO epoch [ 99] train time 0h 0m 2s |  loss |[0.009]
+Thu 05 Sep 2024 09:16:42 INFO ---------- valid total [123] | valid precision [0.159] | valid recall [0.073] | valid f0.5 [0.047] | valid time 0h 2m 34s
+Thu 05 Sep 2024 09:19:16 INFO ---------- test total [123] | test precision [0.152] | test recall [0.043] | test f0.5 [0.024] | test time 0h 2m 33s
+Thu 05 Sep 2024 09:19:19 INFO epoch [100] train time 0h 0m 2s |  loss |[0.009]
+Thu 05 Sep 2024 09:21:54 INFO ---------- valid total [123] | valid precision [0.153] | valid recall [0.054] | valid f0.5 [0.040] | valid time 0h 2m 34s
+Thu 05 Sep 2024 09:24:27 INFO ---------- test total [123] | test precision [0.120] | test recall [0.031] | test f0.5 [0.016] | test time 0h 2m 33s
+Thu 05 Sep 2024 09:24:27 INFO training finished.
+                            best valid result: precision [0.159] | recall [0.073] | F0.5 [0.047]
+                            best test result : precision [0.152] | recall [0.043] | F0.5 [0.024]

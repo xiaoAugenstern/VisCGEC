@@ -1,0 +1,6 @@
+*.bin
+.DS_Store
+.idea
+*.pth
+bart.large
+*.pt

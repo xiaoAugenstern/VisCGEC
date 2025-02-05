@@ -1,0 +1,28 @@
+2024-10-05 03:44:27 - INFO - ------------------------- Logging started ---------------------
+2024-10-05 03:47:23 - INFO - ------------------------- Logging started ---------------------
+2024-10-04 23:54:28 - INFO - ------------------------- Logging started ---------------------
+2024-10-04 23:54:28 - INFO - Method: OCR
+2024-10-04 23:54:28 - INFO - Name: Visual_OCR
+2024-10-04 23:54:28 - INFO - LLM Model: Qwen2-7B
+2024-10-04 23:54:28 - INFO - Template: qwen
+2024-10-05 04:05:41 - INFO - ------------------------- Logging started ---------------------
+2024-10-05 04:05:41 - INFO - Method: OCR
+2024-10-05 04:05:41 - INFO - Name: Visual_OCR
+2024-10-05 04:05:41 - INFO - LLM Model: Qwen2-7B
+2024-10-05 04:05:41 - INFO - Template: qwen
+2024-10-05 04:07:44 - INFO - ------------------------- Logging started ---------------------
+2024-10-05 04:07:44 - INFO - Method: OCR
+2024-10-05 04:07:44 - INFO - Name: Visual_OCR
+2024-10-05 04:07:44 - INFO - LLM Model: Qwen2-7B
+2024-10-05 04:07:44 - INFO - Template: qwen
+2024-10-05 04:07:44 - INFO - Fine-tune llama factory Qwen2-7B with Visual_OCR_train dataset
+2024-10-05 04:07:44 - INFO - 
+Predict llama factory Qwen2-7B with Visual_OCR_test dataset
+2024-10-05 04:07:44 - INFO - An error occurred: Command 'llamafactory-cli train /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/examples/train_lora/qiwen_lora_predict.yaml' returned non-zero exit status 127.
+2024-10-05 04:07:44 - INFO - /bin/sh: line 1: llamafactory-cli: command not found
+
+2024-10-05 04:14:05 - INFO - ------------------------- Logging started ---------------------
+2024-10-05 04:14:05 - INFO - Method: OCR
+2024-10-05 04:14:05 - INFO - Name: Visual_OCR
+2024-10-05 04:14:05 - INFO - LLM Model: Qwen2-7B
+2024-10-05 04:14:05 - INFO - Template: qwen

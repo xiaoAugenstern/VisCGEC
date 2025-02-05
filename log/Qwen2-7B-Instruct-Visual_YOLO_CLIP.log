@@ -1,0 +1,77 @@
+2024-10-06 20:11:28 - INFO - ------------------------- Logging started ---------------------
+2024-10-06 20:11:28 - INFO - Method: YOLO_CLIP
+2024-10-06 20:11:28 - INFO - Name: Visual_YOLO_CLIP
+2024-10-06 20:11:28 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-06 20:11:28 - INFO - Template: qwen
+2024-10-07 08:04:43 - INFO - ------------------------- Logging started ---------------------
+2024-10-07 08:04:43 - INFO - Method: YOLO_CLIP
+2024-10-07 08:04:43 - INFO - Name: Visual_YOLO_CLIP
+2024-10-07 08:04:43 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-07 08:04:43 - INFO - Template: qwen
+2024-10-07 08:04:43 - INFO - Prepare Dataset With Instruction
+2024-10-07 08:04:43 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/trainset.json successfully
+2024-10-07 08:04:43 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/validset.json successfully
+2024-10-07 08:04:43 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/testset.json successfully
+2024-10-07 08:04:43 - INFO - Register Dataset To /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/dataset_info.json
+2024-10-07 08:04:43 - INFO - Turn to /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory
+2024-10-07 08:04:43 - INFO - Activate Env Command
+2024-10-08 16:19:41 - INFO - ------------------------- Logging started ---------------------
+2024-10-08 16:19:41 - INFO - Method: YOLO_CLIP
+2024-10-08 16:19:41 - INFO - Name: Visual_YOLO_CLIP
+2024-10-08 16:19:41 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-08 16:19:41 - INFO - Template: qwen
+2024-10-08 16:19:41 - INFO - Prepare Dataset With Instruction
+2024-10-08 16:19:41 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/trainset.json successfully
+2024-10-08 16:19:41 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/validset.json successfully
+2024-10-08 16:19:41 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/testset.json successfully
+2024-10-08 16:19:41 - INFO - Register Dataset To /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/dataset_info.json
+2024-10-08 16:19:41 - INFO - Turn to /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory
+2024-10-08 16:19:41 - INFO - Activate Env Command
+2024-10-09 09:48:45 - INFO - ------------------------- Logging started ---------------------
+2024-10-09 09:48:45 - INFO - Method: YOLO_CLIP
+2024-10-09 09:48:45 - INFO - Name: Visual_YOLO_CLIP
+2024-10-09 09:48:45 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-09 09:48:45 - INFO - Template: qwen
+2024-10-09 09:48:45 - INFO - Prepare Dataset With Instruction
+2024-10-09 09:48:45 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/trainset.json successfully
+2024-10-09 09:48:45 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/validset.json successfully
+2024-10-09 09:48:45 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/testset.json successfully
+2024-10-09 09:48:45 - INFO - Register Dataset To /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/dataset_info.json
+2024-10-09 09:48:45 - INFO - Turn to /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory
+2024-10-09 09:48:45 - INFO - Activate Env Command
+2024-10-10 00:11:11 - INFO - ------------------------- Logging started ---------------------
+2024-10-10 00:11:11 - INFO - Method: YOLO_CLIP
+2024-10-10 00:11:11 - INFO - Name: Visual_YOLO_CLIP
+2024-10-10 00:11:11 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-10 00:11:11 - INFO - Template: qwen
+2024-10-10 00:11:11 - INFO - Prepare Dataset With Instruction
+2024-10-10 00:11:11 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/trainset.json successfully
+2024-10-10 00:11:11 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/validset.json successfully
+2024-10-10 00:11:11 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/testset.json successfully
+2024-10-10 00:11:11 - INFO - Register Dataset To /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/dataset_info.json
+2024-10-10 00:11:11 - INFO - Turn to /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory
+2024-10-10 00:11:11 - INFO - Activate Env Command
+2024-10-11 12:11:03 - INFO - ------------------------- Logging started ---------------------
+2024-10-11 12:11:03 - INFO - Method: YOLO_CLIP
+2024-10-11 12:11:03 - INFO - Name: Visual_YOLO_CLIP
+2024-10-11 12:11:03 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-11 12:11:03 - INFO - Template: qwen
+2024-10-11 12:11:03 - INFO - Prepare Dataset With Instruction
+2024-10-11 12:11:03 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/trainset.json successfully
+2024-10-11 12:11:03 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/validset.json successfully
+2024-10-11 12:11:03 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/testset.json successfully
+2024-10-11 12:11:03 - INFO - Register Dataset To /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/dataset_info.json
+2024-10-11 12:11:03 - INFO - Turn to /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory
+2024-10-11 12:11:03 - INFO - Activate Env Command
+2024-10-11 13:50:19 - INFO - ------------------------- Logging started ---------------------
+2024-10-11 13:50:19 - INFO - Method: YOLO_CLIP
+2024-10-11 13:50:19 - INFO - Name: Visual_YOLO_CLIP
+2024-10-11 13:50:19 - INFO - LLM Model: Qwen2-7B-Instruct
+2024-10-11 13:50:19 - INFO - Template: qwen
+2024-10-11 13:50:19 - INFO - Prepare Dataset With Instruction
+2024-10-11 13:50:19 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/trainset.json successfully
+2024-10-11 13:50:19 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/validset.json successfully
+2024-10-11 13:50:19 - INFO - Prepare /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/Visual_YOLO_CLIP/testset.json successfully
+2024-10-11 13:50:19 - INFO - Register Dataset To /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory/data/dataset_info.json
+2024-10-11 13:50:19 - INFO - Turn to /home/xiaoman/project/gec/HandwrittenGEC/gectoolkit/llm/LLaMA-Factory
+2024-10-11 13:50:19 - INFO - Activate Env Command
