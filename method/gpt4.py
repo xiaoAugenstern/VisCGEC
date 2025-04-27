@@ -12,7 +12,7 @@ from transformers.generation import GenerationConfig
 # os.environ["https_proxy"] = "http://localhost:7890"
 
 client = OpenAI(
-    api_key = 'sk-proj-8PnZY0t8qmNR2PjYOT0TT3BlbkFJi8OFVzUV3pEa2kX6LCC7',
+    api_key = 'xxxxx',
 )
 
 # 配置日志记录
@@ -239,7 +239,7 @@ if __name__ == '__main__':
         "3. 修改操作: [具体的修改操作列表]"
     )
 
-    img_path = f'/home/xiaoman/project/gec/HandwrittenGEC/dataset/Visual_image/train/2012_2.png'  # 或者 img_url = 'http://example.com/image.png'
+    img_path = f'xxxx/dataset/Visual_image/train/2012_2.png'  # 或者 img_url = 'http://example.com/image.png'
     response = correct_text_from_image(prompt, img_path=img_path)
     corrected_output = response.choices[0].message.content
     print(f"{img_path} Corrected Text:\n", corrected_output)
