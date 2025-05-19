@@ -216,3 +216,28 @@ python compare_m2_for_evaluation.py -hyp hyp.m2 -ref ref.m2
 
 ## Contact
 If you have any problems, feel free to contact me at [xmwang@stu.ecnu.edu.cn](xmwang@stu.ecnu.edu.cn).
+
+## Citation
+```shell
+@inproceedings{wang-etal-2025-viscgec,
+    title = "{V}is{CGEC}: Benchmarking the Visual {C}hinese Grammatical Error Correction",
+    author = "Wang, Xiaoman  and
+      Yuan, Dan  and
+      Liu, Xin  and
+      Zhao, Yike  and
+      Zhang, Xiaoxiao  and
+      Chen, Xizhi  and
+      Lan, Yunshi",
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.261/",
+    pages = "5054--5068",
+    ISBN = "979-8-89176-189-6"
+}
+```
